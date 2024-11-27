@@ -1,0 +1,116 @@
+/* Colores principales */
+:root {
+    --main-blue: #001f54; /* Azul marino */
+    --main-beige: #f5f5dc; /* Beige */
+    --background-color: #ffffff; /* Blanco predeterminado */
+    --text-color: #ffffff; /* Blanco para el texto */
+}
+
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('{{ url_for("static", filename="img/background.jpg") }}') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    filter: brightness(0.8); /* Ajusta la intensidad del fondo */
+}
+
+/* Formulario */
+.container {
+    background-color: var(--main-blue);
+    color: var(--main-beige);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 0.5rem;
+    border: 1px solid var(--main-beige);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input[type="submit"] {
+    background-color: var(--main-beige);
+    color: var(--main-blue);
+    border: none;
+    padding: 0.7rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--text-color);
+    color: var(--main-beige);
+}
+
+/* Enlace */
+a {
+    color: var(--main-beige);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--text-color);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1, h2, h3, p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+button {
+    background-color: var(--main-blue);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--main-beige);
+    color: var(--main-blue);
+    transform: scale(1.05);
+}
