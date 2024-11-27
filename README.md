@@ -18,7 +18,7 @@
 3. Instalar [Git](https://git-scm.com/).
 
 ## Instalación y configuración
-1. Descarga el repositorio.
+1. Descarga el repositorio: https://github.com/KuhaKu091/App_Web.git
 2. Crear y activar un entorno virtual:
 - python -m venv venv
 - venv\Scripts\activate
